@@ -1,12 +1,11 @@
 const hre = require("hardhat");
 
 async function main() {
-  const CounterContractFactory = await hre.ethers.getContractFactory("OpenZeppeLinErc20");
-  const counterContract = await CounterContractFactory.deploy("DisVeck","DV");
-
-  // await counterContract.deployed();
-   // 获取合约地址
-   const ContractAddress = await counterContract.getAddress();
+  const ERC20 = await hre.ethers.getContractFactory("Erc20TX");
+  const ERC20_TX = await ERC20.deploy();
+  const mintToken = await ERC20_TX.mint("0xbfC99F161B83f591a14E1fc13D12d7c086542774", 1000000000);
+  
+  const ContractAddress = await ERC20_TX.getAddress();
 
   console.log(
     `Counter contract deployed to https://explorer.public.zkevm-test.net/address/${ContractAddress}`
