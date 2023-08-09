@@ -1,5 +1,5 @@
 {
-  "name": "zksync-era",
+  "name": "coinbase",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
-    "@matterlabs/hardhat-zksync-solc": "^0.4.1",
-    "hardhat": "^2.17.0"
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.17.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3"
   }
 }
