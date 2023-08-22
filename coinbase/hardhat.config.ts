@@ -18,7 +18,8 @@ const config: HardhatUserConfig = {
     'base-mainnet': {
       url: 'https://mainnet.base.org',
       accounts: [process.env.WALLET_KEY as string],
-      gasPrice: 1000000000
+      gasPrice: 11000,
+      gas: 300000
     },
     // for testnet
     'base-goerli': {
