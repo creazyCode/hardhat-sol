@@ -28,7 +28,7 @@ async function main() {
    const uint256Value = 1000000000000000;
    const bytesValue = "0x";
 
-  // 调用setNumber方法
+  // sendMessage
   const tx = await contract.sendMessage(address, uint256Value, bytesValue, {value : amount});
   await tx.wait();
   console.log("Number set successful.");
