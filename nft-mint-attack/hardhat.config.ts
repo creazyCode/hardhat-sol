@@ -3,6 +3,7 @@
  * @@Author: tx
  * @@Date: Do not edit
  */
+/** @type import('hardhat/config').HardhatUserConfig */
 import "@nomicfoundation/hardhat-toolbox";
 import { HardhatUserConfig } from "hardhat/config";
 
@@ -10,9 +11,10 @@ require('dotenv').config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.17',
+    version: '0.8.18',
   },
   networks: {
+
     //mainnet
     'base-mainnet': {
       url: 'https://mainnet.base.org',
